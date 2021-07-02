@@ -1,0 +1,32 @@
+Compile instructions for the WebServiceClientServerApp
+		Written by www.codejava.net
+=======================================================
+
+- Change directory to src directory:
+	
+	cd src
+	
+- Compile web service:
+	
+	javac net\codejava\webservices\server\MD5WebService.java
+
+- Compile server code:
+
+	javac net\codejava\webservices\server\WebServiceServer.java
+
+- Start the server:
+	
+	java net.codejava.webservices.server.WebServiceServer
+
+- Open new command prompt, change directory to src directory. Type:
+
+	wsimport -keep -p net.codejava.webservices.client http://localhost:9898/md5WebService?wsdl
+
+- Compile client code:
+	
+	javac net\codejava\webservices\client\WebServiceClient.java
+	
+- Run the client:
+	
+	java net.codejava.webservices.client.WebServiceClient
+
